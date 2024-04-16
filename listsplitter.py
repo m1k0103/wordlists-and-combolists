@@ -1,6 +1,6 @@
 import os
 
-to_split = "3.9M(TWITTER-NETFLIX-FACEBOOK).txt"
+to_split = "3.9M(TWITTER-NETFLIX-FACEBOOK)"
 
 #will split the file into 3M segments
 
@@ -10,7 +10,7 @@ os.mkdir(newdir)
 with open(to_split, 'r') as f:  
     count = 0
     while True: 
-        output_file = open(f'{newdir}/part{count}_{to_split}', 'w') 
+        output_file = open(f'{newdir}/part{count}_{to_split}.txt', 'w') 
         for i in range(2000000):
             try:
                 line = f.readline()
